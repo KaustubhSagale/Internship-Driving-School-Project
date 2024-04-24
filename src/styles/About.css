@@ -1,0 +1,132 @@
+.a{
+  
+    display: flex;
+    flex-direction: row;
+  justify-content:space-between;
+height: 500px;
+  background: rgb(10, 48, 95);
+  color: white;
+
+  /* margin-bottom: 50%; */
+  }
+
+  
+  
+  
+
+.i{
+    margin-top: 5%;
+    padding-left: 3%;
+    padding-right: 5%;
+  
+  }
+
+  .www{margin-top: -7%;
+    margin-bottom: 0;
+    margin-left: 8%;
+    margin-right: 78px;
+  }
+    /* .q{
+    margin-top: 20px;
+margin-left: 50px;
+margin-right: 200px;
+margin-bottom: -120px;
+
+word-wrap: calc();
+
+
+  } */
+
+  
+  .text-container11{
+    /* display: flex; */
+    padding-top: 7%;
+   margin-left: 2%;
+  }
+  .aaa{
+    margin-top: -6%;
+   
+    align-items: center;
+    align-content: center;
+  }
+  h1{
+    padding-left: 5%;
+    background: rgb(77, 5, 79);
+    margin-bottom: -1px;
+   
+  }
+.l{
+  height: 200px;
+  padding-left: 0%;
+  margin-right: 3%;
+  /* margin-left: -3%; */
+  width: 430px;
+}
+
+img{
+  height: 500px;
+  width: 500px;
+}
+.container11{
+  
+    width: 100%;
+    max-width: 1380px;
+    margin: 0;
+    padding: 0; /* Optionally, you can remove padding as well */
+
+   
+    /* overflow: auto; */
+    min-height: 400px;
+  text-align: center;
+background-color: white;
+align-items: center;
+align-content: center;
+height: 45px;
+margin-top: 20px;
+}
+.rrrr{
+  text-decoration: underline;
+  text-shadow: 5%;
+  font-size: 28px;
+  
+}
+
+@media (max-width: 768px) {
+  .container11 {
+    /* Adjust styles for smaller screens */
+    max-width: 100%; /* Adjust the maximum width for smaller screens */
+    height: auto; /* Allow the height to adjust based on content */
+    margin-top: 10px; /* Decrease top margin for smaller screens */
+    /* overflow: visible; */
+    
+  }
+  
+  /* Target the image inside .container11 */
+  .container11 img {
+    /* align-self: z; */
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+  .text-container11 {
+  
+    text-align: center; /* Center text */
+    margin-top: auto; /* Move text to the bottom */
+    word-wrap: break-word; /* Allow long words to wrap */
+    overflow-wrap: break-word; /* Fallback for wider browser support */
+  }
+  
+  .text-container11 {
+    font-size: 14px;
+    text-align: center;
+  }
+  .l{
+    margin-right: 2%;
+    padding-top: 10%;
+    margin-top: 8%;
+    width: 300px;
+    height: auto;
+    padding-left: 0%;
+    /* margin-left: -3%; */
+    
+  }
+}

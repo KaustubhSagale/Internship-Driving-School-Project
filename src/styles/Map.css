@@ -1,0 +1,668 @@
+.m{
+    margin-top: 7%;
+    margin-left: 2%;
+}
+.kppp{
+  
+        background-color: black; /* Set your desired color using a color code, name, or other valid values */
+        color: #fff; /* Set the text color to contrast with the background */
+        padding: 20px; /* Add padding to give some space inside the div */
+ 
+}
+.aaaa{
+    display: flex;
+    
+}
+.aaaa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}.m {
+  flex: 1;
+  margin-right: 10px;
+  margin-bottom: 2%;
+}
+
+.kppp {
+  flex: 1;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  margin-bottom: 15px;
+}
+
+/* Styles for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .aaaa {
+    flex-direction: column;
+  }
+
+  .m {
+    margin-right: 0;
+  }
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed */
+    align-items: center; /* Adjust as needed */
+    padding: 20px; /* Adjust as needed */
+    background-color: #f0f0f0; /* Adjust as needed */
+    border: 1px solid #ccc; /* Adjust as needed */
+    margin: 10px; /* Adjust as needed */
+}
+@import url("https://fonts.googleapis.com/css?family=Raleway:400");
+
+* {
+	box-sizing: border-box;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+/* 
+body {
+	font-family: Raleway, sans-serif;
+	text-align: center;
+	margin: 0;
+	padding: 1rem;
+	background-color: rgba(10, 12, 18, 1);
+	color: white;
+	min-height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+} */
+.dri{
+  margin-top: 15px;
+}
+.para {
+	margin: 0;
+  padding: 2rem;
+text-align: center;
+
+animation-duration: 3s;
+animation-name: slidein;
+/* animation-iteration-count: infinite;
+animation-direction: alternate;} */}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(168, 239, 255, 1);
+	--c2: rgba(168, 239, 255, 0.1);
+}
+
+.wrapper {
+	min-width: min(40rem, 100%);
+
+}
+
+.bo{
+  color: white;
+
+}
+
+.box {
+	font-size: 20px;
+	margin: max(2rem, 1vw);
+  margin-top: 90px;
+  
+	border: 0.35rem solid;
+	padding: 1;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.box:nth-child(2) {
+	border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+	animation: borderRadial var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}
+
+
+
+
+.hover {
+    border: 8px solid;
+    border-image: repeating-linear-gradient(135deg, #F8CA00 0 10px, #E97F02 0 20px, #BD1550 0 30px) 8;
+  
+    -webkit-mask: 
+      conic-gradient(from 180deg at top 8px right 8px, #0000 90deg, #000 0)
+      var(--_i, 200%) 0 / 200% var(--_i, 8px) border-box no-repeat,
+    
+      conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0)
+      0 var(--_i, 200%) / var(--_i, 8px) 200% border-box no-repeat,
+    
+      linear-gradient(#000 0 0) padding-box no-repeat;
+    
+    mask: 
+      conic-gradient(from 180deg at top 8px right 8px, #0000 90deg, #000 0)
+      var(--_i, 200%) 0 / 200% var(--_i, 8px) border-box no-repeat,
+    
+      conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0)
+      0 var(--_i, 200%) / var(--_i, 8px) 200% border-box no-repeat,
+    
+      linear-gradient(#000 0 0) padding-box no-repeat;
+  
+    transition: .3s, -webkit-mask-position .3s .3s;
+  }
+  
+  .hover:hover {
+    --_i: 100%;
+    /* color: #CC333F; */
+    color: #CC333F;
+    transition: .3s, -webkit-mask-size .3s .3s;
+  }
+  /* Map.css */
+
+.auto-hover {
+  --_i: 100%;
+  color: #CC333F;
+  transition: .3s, -webkit-mask-size .3s .3s;
+}
+@media screen and (max-width: 768px) {
+  .hover {
+    /* Add mobile-specific styles here */
+    /* For example, you might want to reduce the border size */
+    border-width: 4px;
+  }
+}
+  
+  /* body {
+    height: 100vh;
+    margin: 0;
+    display: grid; 
+    place-content: center;
+    align-items: center;
+  } */
+  h6 {
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    margin:0;
+    cursor: pointer;
+    padding: 0.8em;
+    text-align: center;
+    /* color:  #36454F; */
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    background-clip: text;
+    color: transparent;
+  }
+  .h{
+    margin-top: 12px;
+    background-color: black;
+    height: 6.1rem;
+  }
+
+.topd{
+  display: flex;
+  /* flex-wrap: nowrap; */
+  justify-content:space-around;
+font-size: larger;
+  color: white;
+  margin-top: 15px;
+}
+.toppp{
+  margin-top: 45px;
+
+
+}
+
+
+
+
+.alll{
+  margin-top: 25px;
+}
+
+
+
+
+
+
+
+
+
+.S{ height: 200px;
+  width: 200px;
+    border-radius: 50px;
+background: #e0e0e0;
+box-shadow:  26px 26px 51px #bebebe,
+             -26px -26px 51px #ffffff;
+             
+  }
+.s{background-color: white;
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.s{  
+  margin-top: 8%;
+  margin-bottom: 5%;
+}
+.c{
+
+background-color: white;
+
+
+padding-bottom: 80px;
+  padding-top: 3%;
+  margin-top: 90px;
+  
+}
+
+img{
+  height: 200px;
+  width: 100%;
+}
+
+.S {
+  height: 100%;
+  background: #223;
+  display: grid;
+  place-items: center;
+}
+
+.S {
+  --border-size: 5px;
+  --border-angle: 0turn;
+  width: 40vmin;
+  height: 30vmin;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 50%,
+      #213
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  animation: bg-spin 3s linear infinite;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+.S:hover {
+  animation-play-state: paused;
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+.tot{padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  height: 165px;
+  width: 90%;
+  margin-top: 8%;
+  border-radius: 5%;
+  margin-left: 5%;
+  margin-bottom:-2%;
+}
+
+footer strong {
+  /* color: #ff006e; */
+  color: white;
+  text-align: center;
+  margin-left: 38px;
+  margin-right: 10px;
+  margin-bottom: 116px;
+  
+}
+
+#container {
+  display: inline-block;
+  overflow: hidden;
+}
+
+#container .tot {
+  display: block;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#container:hover .tot {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.cou{
+  font-size: 1.8rem;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  background-clip: text;
+  color: transparent;}
+  
+
+
+
+
+  /* address */
+
+
+  *,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+.parag{
+  margin-top: 0;
+  animation-duration: 3s;
+animation-name: slidein;
+}
+/* p {
+  margin-top: 0;
+  font-size: 0.95rem;
+  text-align: center;
+} */
+.cardd {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  background: transparent;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 49, 49, 0.5);
+  border-right: 1px solid rgba(0, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(57, 255, 20, 0.5);
+  border-left: 1px solid rgba(255, 255, 113, 0.5);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+}
+.alll{
+  display: flex;
+  justify-content: space-around;
+}
+span {
+  position: absolute;
+  border-radius: 100vmax;
+}
+
+.top {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    transparent 50%,
+    rgba(255, 49, 49, 0.5),
+    rgb(255, 49, 49)
+  );
+}
+
+.bottom {
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    rgb(57, 255, 20),
+    rgba(57, 255, 20, 0.5),
+    transparent 50%
+  );
+}
+
+.right {
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 30%,
+    rgba(0, 255, 255, 0.5),
+    rgb(0, 255, 255)
+  );
+}
+
+.left {
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  height: 0;
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 113),
+    rgba(255, 255, 113, 0.5),
+    transparent 70%
+  );
+}
+
+.top {
+  animation: animateTop 3s ease-in-out infinite;
+}
+
+.bottom {
+  animation: animateBottom 3s ease-in-out infinite;
+}
+
+.right {
+  animation: animateRight 3s ease-in-out infinite;
+}
+
+.left {
+  animation: animateLeft 3s ease-in-out infinite;
+}
+
+@keyframes animateTop {
+  25% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  30%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateBottom {
+  0%,
+  50% {
+    opacity: 0;
+    width: 0;
+  }
+
+  75% {
+    opacity: 1;
+    width: 100%;
+  }
+
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateRight {
+  0%,
+  25% {
+    opacity: 0;
+    height: 0;
+  }
+
+  50% {
+    opacity: 1;
+    height: 100%;
+  }
+
+  55%,
+  100% {
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes animateLeft {
+  0%,
+  75% {
+    opacity: 0;
+    bottom: 0;
+    height: 0;
+  }
+
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Map.css */
+
+/* Add responsive styles for the entire component */
+@media screen and (max-width: 480px) {
+  .aaaa {
+    display: flex;
+    flex-direction: column-reverse; /* Reversing the order for better mobile layout */
+  }
+
+  .m {
+    width: 100%;
+  }
+
+  .kppp {
+    margin-top: 20px;
+  }
+
+  .dri {
+    padding: 20px;
+  }
+
+  .alll {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cardd {
+    width: 100%;
+  }
+
+  .c {
+    padding: 20px;
+  }
+
+  .s {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .S {
+      width: 100%;
+      height: 70%;
+    }
+  }
+
+  .toppp {
+    padding: 20px;
+  }
+
+  .topd {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h7 {
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 480px){
+  .m{
+    display: flex;
+  }
+ 
+}

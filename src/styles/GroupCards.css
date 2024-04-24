@@ -1,0 +1,100 @@
+.scrollable-card-list {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: 20px; /* Add margin to separate from other content */
+  width: 100%;
+  margin-top: -3.4%;
+}
+.g {
+  justify-content: space-between;
+  gap: 50px; /* Adjust the gap value as needed for space between cards */
+  margin-top: -92px;
+  margin-bottom: 280px;
+
+
+  
+}
+
+
+@media (max-width: 768px) {
+ .pk{
+  margin-top: 66px;
+  padding-top: 10%;
+ }
+ .ik{
+  margin-top: 110%;
+  padding-top: 25%;
+ margin-right: 20%;
+ }
+ 
+ .k{
+  padding-top: 100px;
+ }
+ 
+ .card-img-top{
+  width: 100%;
+  padding-right: -140px;
+ }
+ 
+  .g {
+    margin-top: 0%;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
+    gap: 58px; /* Reduce gap between cards */
+  }}
+
+
+.card-text{
+  font-size: 18px;
+}
+
+.card-body {
+  margin-bottom: -10%;
+  margin-top: -90%;
+  color: white;
+}
+.pk{
+  margin-top: 20px;
+  margin-left: 60px;
+}
+.ik{
+color: white;
+background-color:  rgba(42,64,93,255); 
+/* background-color: #04e824; */
+/* background-color: rgba(71,207,169,255); */
+  text-align: center;
+  padding-top: 14px;
+  margin-top: -20px;
+  justify-content: space-between;
+  
+}
+.k{
+  /* background-color: #04e824; */
+ background-color:  rgba(42,64,93,255); 
+  margin-top: 10%;
+
+margin-bottom: 10px;
+
+
+}
+.text-muted{
+width: 12px;
+  font-size: 15px;
+}
+.card-img-top{
+  padding-bottom: 23%;
+ width:250px;
+margin-top: -1px;
+}
+.card-footer{
+  margin-top: 7%;
+width: 250px;
+
+height: 80px;
+}
+
+
+
+
+
+

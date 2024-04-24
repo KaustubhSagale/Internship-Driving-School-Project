@@ -1,0 +1,245 @@
+ 
+ 
+
+
+   .pv{ margin: 0;
+    padding: 0;
+    
+    
+    background-image: url('https://images.unsplash.com/photo-1528747045269-390fe33c19f2?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    
+
+    background-size: cover;
+    background-position: center 15px; 
+    backdrop-filter: blur(12px);
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(0, 0, 0);
+  }
+  
+
+form {
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto; 
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+ 
+  background-color:rgb(0, 208, 0);
+}
+
+
+.h1 {  
+  text-align: center;
+  color: transparent;
+  font-size: 80px;
+  background: linear-gradient(to right,
+    #fe015a 0%, #fe015a 35%, rgba(255, 3, 3, 0.5) 35%, rgba(0, 188, 212, 0.5) 50%, rgb(13, 7, 123) 50%, rgb(131, 112, 7) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text; 
+  animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 75%;
+  }
+  50% {
+    background-position: 100% 30%;
+  }
+  100% {
+    background-position: 0% 70%;
+  }
+}
+
+
+
+.llogo {
+  width: 60px;
+  height: 60px;
+
+  margin-bottom: 30px;
+}
+
+.social-icons {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.social-icons a {
+  
+  margin: 0 10px;
+  text-decoration: none;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+h4 {
+  text-align: center;
+  color: #fff;
+}
+.nb{
+  margin-top: 50%;
+}
+
+.sectionn {
+  background-color: rgba(0, 128, 255, 1.);
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  align-items: center;
+  height: 550px;
+  margin-bottom: -150px;
+  padding: 12px;
+
+
+  
+
+}
+
+.contact-us {
+  margin-top: 330px;
+  width: 900px;
+  margin-right: 100px;
+}
+
+.nk {
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+  margin-left: 20%;
+}
+
+.nnp {
+  margin-top: 100px;
+
+  color: #00bcd4;
+}
+.np:hover {
+  color: rgb(10, 191, 10);
+}
+
+.nw{
+  color: #00bcd4;
+
+ 
+}
+.nw:hover {
+  color: black;
+}
+
+.ne {
+  padding-bottom: 80%;
+  color: #00bcd4;
+
+}
+.ne:hover {
+  color: red;
+}
+
+.nf {
+  margin-right: 315px;
+  margin-bottom: 400px;
+  margin-top: 40px;
+  
+  height: 190px;
+  width: 500px;
+}
+.npp{
+ 
+  padding-top: 10px;
+}
+
+.nm{
+margin-top: -150px;
+  text-align: justify;
+}
+
+/* nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1600PX;
+  margin: 0;
+  font-size: larger;
+  align-items: center;
+  height: 45px;
+ 
+
+} */
+/* nav ul {
+  display: flex;
+  list-style-type: none; 
+  justify-content: space-between;
+  gap: 24px;
+}
+.logo {
+  display: flex;
+  margin-left: 12px;
+  align-items: center;
+  background-color: rgb(255, 255, 0);
+  max-height: 70px;
+  margin-top: 8px;
+  
+} */
+
+.n{
+  
+  max-width: 1280px;
+  
+}
+
+
+.h2{
+  color: #fff;
+  font-size: 54px;
+  text-align: center;
+}
+
+
+
+
+
+.h3{
+  padding: 12px 33px;
+}
+/* Define styles for general elements */
+
+
+/* Media query for devices with a maximum width of 768px (typical for mobile devices) */
+@media only screen and (max-width: 768px) {
+ h2.my-element{
+  
+ } 
+}

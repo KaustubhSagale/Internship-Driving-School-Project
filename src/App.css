@@ -36,3 +36,90 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.card {
+  margin-top: 5%;
+  width: 960px;
+  height: 148px;
+}
+.K
+{
+  
+display: block; 
+margin: auto; 
+padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); 
+cursor: zoom-out;
+width:920px;
+ height:200px;
+}
+
+
+p{
+  margin-top: 180px;
+}
+/* YourStyle.css */
+.disable-selection {
+  -webkit-user-select: none; /* Disable user selection in webkit browsers */
+  -moz-user-select: none; /* Disable user selection in Firefox */
+  -ms-user-select: none; /* Disable user selection in Microsoft browsers */
+  user-select: none; /* Standard syntax to disable user selection */
+}
+/* Custom CSS for CardGroup */
+
+
+
+
+h1{
+  padding-left: 5%;
+  background-color: rgb(77, 107, 189);
+  margin-bottom: -1px;
+}
+.Cards {
+  margin-top: 1200px;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  margin-top: 100px;
+  
+background-color: black;
+  background-size: cover;
+  background-position: center 15px; 
+  backdrop-filter: blur(12px);
+  /* font-family: 'Arial', sans-serif;
+  background-color: rgb(0, 0, 0); */
+}
+
+
+/* h1 {  
+  text-align: center;
+  color: transparent;
+  font-size: 80px;
+  background: linear-gradient(to right,
+    #fe015a 0%, #fe015a 35%, rgba(255, 3, 3, 0.5) 35%, rgba(0, 188, 212, 0.5) 50%, rgb(13, 7, 123) 50%, rgb(131, 112, 7) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text; 
+  animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 75%;
+  }
+  50% {
+    background-position: 100% 30%;
+  }
+  100% {
+    background-position: 0% 70%;
+  }
+} */
+
+
+

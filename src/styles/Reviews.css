@@ -1,0 +1,85 @@
+/* Reviews.css */
+
+/* Style for the scrollable card list */
+.scrollable-card-listt {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: 10px; /* Adjust margin as needed */
+  width: 100%;
+  margin-top: 5%;
+  padding-top: 3%;
+  padding-bottom: -120px;
+  margin-bottom: auto;
+  height: 2%;
+  background-color: rgba(0,161,206,255);
+
+}
+.text-muted {
+  color: blue; /* Replace 'your_color_code' with the desired color code */
+}
+
+.h7{
+  text-align: center;
+
+}
+.scrollable-card-list{
+  padding-bottom: -400px;
+  margin-bottom: -10px;
+  
+}
+
+
+/* Style for each Card in the CardGroup */
+.card {
+  display: inline-block;
+  width: 18rem; /* Adjust the card width as needed */
+  margin-right: 15px; /* Adjust margin as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+  margin-top: 18%;
+
+
+}
+
+.card:hover {
+  transform: scale(1.10); /* Enlarge the card on hover */
+}
+
+/* Style for Card.Body */
+.card-body {
+  padding: 1.25rem; /* Adjust padding to your preference */
+}
+.cb{
+  margin-top: 1200px;
+}
+/* Style for Card.Footer */
+.card-footer {
+  background-color: #f8f9fa; /* Light background color for the footer */
+  padding: 1rem; /* Adjust padding to your preference */
+  margin-right: -42px;
+  justify-items: auto;
+  font-size: 1px;
+}
+
+/* Style for small text in Card.Footer */
+.card-footer small {
+  color: #6c757d; /* Text color for the small text */
+}
+
+.card:last-child {
+  margin-right: 0; /* Remove margin for the last card to avoid extra space */
+}
+
+/* Additional style for the 't' class used in Cards */
+.t {
+  margin-top: 2%; /* Adjust margin-top as needed */
+}
+
+/* Additional style for the 'q' class used in CardGroup */
+.q {
+  height: 400px; /* Adjust height as needed */
+margin-top: 120px;
+}
+.lp{
+  color: black;
+}

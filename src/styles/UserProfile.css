@@ -1,0 +1,24 @@
+h1,h3{
+    color: white;
+}
+.user-image{
+    aspect-ratio: 4/3;
+    width: 50%;
+    height: 70%;
+}
+.image-ssec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardUser{
+    border-radius: 20px;
+    box-shadow: rgba(211, 211, 211, 0.2) 0px 7px 29px 0px;
+    margin: 2rem;
+    margin-top: 5rem !important;
+}
+.cardHere{
+    background-color: rgb(25, 25, 25);
+    box-shadow: rgba(211, 211, 211, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

@@ -1,0 +1,93 @@
+
+.logo img {
+    width: 100px; /* Adjust the width as needed */
+    height: 120px; /* Maintain aspect ratio */
+padding-bottom: 35px;
+padding-top: 5px;
+
+}
+
+.logo {
+    width: 60px;
+    height: 55px;
+    margin-bottom: 300px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1600PX;
+    margin: 0;
+    font-size: larger;
+    align-items: center;
+    height: 45px;
+   
+  
+  }
+  nav ul {
+    display: flex;
+    list-style-type: none; 
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .nn{
+    background-color:black;
+    padding-bottom: 3%;
+    max-width: 100%;
+    margin-top: -5%;
+  }  
+
+  button {
+    background-color: #00bcd4;
+    color: #fff;
+   
+    padding: 4px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+   
+    background-color:rgb(0, 208, 0);
+  }
+  .e {
+    padding-bottom: 80%;
+    color: #00bcd4;
+  
+  }
+  .e:hover {
+    color: red;
+  }
+
+  @media screen and (max-width: 480px){
+    button{
+      margin-top: 0px;
+      margin-bottom: 105px;
+    }
+    .nn{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-bottom: 155px;
+      margin-top: -100px;
+    }
+    .grid {
+      margin-top: 20px;
+    }
+    
+  }
+
+
+
+
+
+
+
+  
