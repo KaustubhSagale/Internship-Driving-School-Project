@@ -1,244 +1,33 @@
-[debug] [2024-04-23T11:42:04.502Z] ----------------------------------------------------------------------
-[debug] [2024-04-23T11:42:04.504Z] Command:       /opt/homebrew/Cellar/node/21.6.1/bin/node /opt/homebrew/bin/firebase deploy
-[debug] [2024-04-23T11:42:04.504Z] CLI Version:   13.7.3
-[debug] [2024-04-23T11:42:04.504Z] Platform:      darwin
-[debug] [2024-04-23T11:42:04.504Z] Node Version:  v21.6.1
-[debug] [2024-04-23T11:42:04.504Z] Time:          Tue Apr 23 2024 17:12:04 GMT+0530 (India Standard Time)
-[debug] [2024-04-23T11:42:04.504Z] ----------------------------------------------------------------------
+[debug] [2024-04-26T19:29:24.730Z] ----------------------------------------------------------------------
+[debug] [2024-04-26T19:29:24.731Z] Command:       /opt/homebrew/Cellar/node/21.6.1/bin/node /opt/homebrew/bin/firebase deploy
+[debug] [2024-04-26T19:29:24.732Z] CLI Version:   13.7.5
+[debug] [2024-04-26T19:29:24.732Z] Platform:      darwin
+[debug] [2024-04-26T19:29:24.732Z] Node Version:  v21.6.1
+[debug] [2024-04-26T19:29:24.732Z] Time:          Sat Apr 27 2024 00:59:24 GMT+0530 (India Standard Time)
+[debug] [2024-04-26T19:29:24.732Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-04-23T11:42:04.533Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-04-23T11:42:04.534Z] > authorizing via signed-in user (kaustubhsagale007@gmail.com)
-[debug] [2024-04-23T11:42:04.534Z] [iam] checking project ahen-bdff6 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-04-23T11:42:04.534Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions [none]
-[debug] [2024-04-23T11:42:04.534Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions x-goog-quota-user=projects/ahen-bdff6
-[debug] [2024-04-23T11:42:04.534Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-23T11:42:06.701Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions 200
-[debug] [2024-04-23T11:42:06.701Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-23T11:42:06.702Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions [none]
-[debug] [2024-04-23T11:42:06.702Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
-[debug] [2024-04-23T11:42:07.820Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions 404
-[debug] [2024-04-23T11:42:07.820Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
-[debug] [2024-04-23T11:42:07.822Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Unknown service account","status":404}
-[debug] [2024-04-23T11:42:07.823Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 [none]
-[debug] [2024-04-23T11:42:08.871Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 200
-[debug] [2024-04-23T11:42:08.871Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 {"projectId":"ahen-bdff6","projectNumber":"306406805467","displayName":"Ahen","name":"projects/ahen-bdff6","resources":{"hostingSite":"ahen-bdff6"},"state":"ACTIVE","etag":"1_d3e8f9b8-da31-48c8-b7c6-54041b1c0e35"}
+[debug] [2024-04-26T19:29:24.760Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"frameworksBackend"}
+[debug] [2024-04-26T19:29:24.763Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-26T19:29:24.763Z] > authorizing via signed-in user (kaustubhsagale007@gmail.com)
+[debug] [2024-04-26T19:29:24.763Z] [iam] checking project ahen-bdff6 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-04-26T19:29:24.763Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions [none]
+[debug] [2024-04-26T19:29:24.763Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions x-goog-quota-user=projects/ahen-bdff6
+[debug] [2024-04-26T19:29:24.763Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-26T19:29:26.536Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions 200
+[debug] [2024-04-26T19:29:26.536Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-26T19:29:26.536Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-04-26T19:29:26.536Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-04-26T19:29:28.581Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions 404
+[debug] [2024-04-26T19:29:28.582Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
+[debug] [2024-04-26T19:29:28.583Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Unknown service account","status":404}
+[debug] [2024-04-26T19:29:28.585Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 [none]
+[debug] [2024-04-26T19:29:29.295Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 200
+[debug] [2024-04-26T19:29:29.295Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 {"projectId":"ahen-bdff6","projectNumber":"306406805467","displayName":"Ahen","name":"projects/ahen-bdff6","resources":{"hostingSite":"ahen-bdff6","realtimeDatabaseInstance":"ahen-bdff6-default-rtdb"},"state":"ACTIVE","etag":"1_d3e8f9b8-da31-48c8-b7c6-54041b1c0e35"}
 [info] 
 [info] === Deploying to 'ahen-bdff6'...
 [info] 
 [info] i  deploying firestore, functions, hosting 
-[debug] [2024-04-23T11:42:09.062Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
-    at Object.join (node:path:1175:7)
-    at Config.path (/opt/homebrew/lib/node_modules/firebase-tools/lib/config.js:125:45)
-    at getChildEnvironment (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:56:49)
-    at runTargetCommands (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:77:14)
-    at /opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:151:24
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async chain (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/index.js:38:9)
-    at async deploy (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/index.js:94:5)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2024-04-23T17:45:12.779Z] ----------------------------------------------------------------------
-[debug] [2024-04-23T17:45:12.781Z] Command:       /opt/homebrew/Cellar/node/21.6.1/bin/node /opt/homebrew/bin/firebase deploy
-[debug] [2024-04-23T17:45:12.781Z] CLI Version:   13.7.3
-[debug] [2024-04-23T17:45:12.781Z] Platform:      darwin
-[debug] [2024-04-23T17:45:12.781Z] Node Version:  v21.6.1
-[debug] [2024-04-23T17:45:12.781Z] Time:          Tue Apr 23 2024 23:15:12 GMT+0530 (India Standard Time)
-[debug] [2024-04-23T17:45:12.781Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2024-04-23T17:45:12.812Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-04-23T17:45:12.813Z] > authorizing via signed-in user (kaustubhsagale007@gmail.com)
-[debug] [2024-04-23T17:45:12.813Z] [iam] checking project ahen-bdff6 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-04-23T17:45:12.813Z] > refreshing access token with scopes: []
-[debug] [2024-04-23T17:45:12.814Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2024-04-23T17:45:12.814Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-04-23T17:45:13.075Z] *** [apiv2] error from fetch(https://www.googleapis.com/oauth2/v3/token, {"headers":{},"method":"POST","body":{"_overheadLength":545,"_valueLength":212,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------203191083613396161227027","_events":{},"_eventsCount":1}}): FetchError: request to https://www.googleapis.com/oauth2/v3/token failed, reason: read ECONNRESET
-[debug] [2024-04-23T17:45:13.076Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2024-04-23T17:45:13.076Z] > refreshing access token with scopes: []
-[debug] [2024-04-23T17:45:13.077Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2024-04-23T17:45:13.077Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-04-23T17:45:13.208Z] *** [apiv2] error from fetch(https://www.googleapis.com/oauth2/v3/token, {"headers":{},"method":"POST","body":{"_overheadLength":545,"_valueLength":212,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------394934929187198587819831","_events":{},"_eventsCount":1}}): FetchError: request to https://www.googleapis.com/oauth2/v3/token failed, reason: read ECONNRESET
-[debug] [2024-04-23T17:45:13.209Z] [functions] service account IAM check errored, deploy may fail: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci {"name":"FirebaseError","children":[],"exit":1,"message":"Authentication Error: Your credentials are no longer valid. Please run \u001b[1mfirebase login --reauth\u001b[22m\n\nFor CI servers and headless environments, generate a new token with \u001b[1mfirebase login:ci\u001b[22m","status":500}
-[debug] [2024-04-23T17:45:13.210Z] > refreshing access token with scopes: []
-[debug] [2024-04-23T17:45:13.211Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2024-04-23T17:45:13.211Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-04-23T17:45:13.586Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2024-04-23T17:45:13.586Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-04-23T17:45:13.600Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 [none]
-[debug] [2024-04-23T17:45:14.460Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 200
-[debug] [2024-04-23T17:45:14.461Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 {"projectId":"ahen-bdff6","projectNumber":"306406805467","displayName":"Ahen","name":"projects/ahen-bdff6","resources":{"hostingSite":"ahen-bdff6"},"state":"ACTIVE","etag":"1_d3e8f9b8-da31-48c8-b7c6-54041b1c0e35"}
-[info] 
-[info] === Deploying to 'ahen-bdff6'...
-[info] 
-[info] i  deploying firestore, functions, hosting 
-[debug] [2024-04-23T17:45:14.669Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
-    at Object.join (node:path:1175:7)
-    at Config.path (/opt/homebrew/lib/node_modules/firebase-tools/lib/config.js:125:45)
-    at getChildEnvironment (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:56:49)
-    at runTargetCommands (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:77:14)
-    at /opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:151:24
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async chain (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/index.js:38:9)
-    at async deploy (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/index.js:94:5)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2024-04-24T09:32:34.454Z] ----------------------------------------------------------------------
-[debug] [2024-04-24T09:32:34.456Z] Command:       /opt/homebrew/Cellar/node/21.6.1/bin/node /opt/homebrew/bin/firebase deploy
-[debug] [2024-04-24T09:32:34.456Z] CLI Version:   13.7.3
-[debug] [2024-04-24T09:32:34.456Z] Platform:      darwin
-[debug] [2024-04-24T09:32:34.456Z] Node Version:  v21.6.1
-[debug] [2024-04-24T09:32:34.456Z] Time:          Wed Apr 24 2024 15:02:34 GMT+0530 (India Standard Time)
-[debug] [2024-04-24T09:32:34.456Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2024-04-24T09:32:34.457Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2024-04-24T09:32:34.500Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-04-24T09:32:34.500Z] > authorizing via signed-in user (kaustubhsagale007@gmail.com)
-[debug] [2024-04-24T09:32:34.500Z] [iam] checking project ahen-bdff6 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-04-24T09:32:34.500Z] > refreshing access token with scopes: []
-[debug] [2024-04-24T09:32:34.500Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2024-04-24T09:32:34.500Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-04-24T09:32:34.982Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2024-04-24T09:32:34.982Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-04-24T09:32:34.997Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions [none]
-[debug] [2024-04-24T09:32:34.998Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions x-goog-quota-user=projects/ahen-bdff6
-[debug] [2024-04-24T09:32:34.998Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-24T09:32:35.447Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2024-04-24T09:32:35.447Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
-[debug] [2024-04-24T09:32:36.827Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions 200
-[debug] [2024-04-24T09:32:36.827Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-24T09:32:36.828Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions [none]
-[debug] [2024-04-24T09:32:36.828Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
-[debug] [2024-04-24T09:32:39.147Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions 404
-[debug] [2024-04-24T09:32:39.147Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
-[debug] [2024-04-24T09:32:39.148Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Unknown service account","status":404}
-[debug] [2024-04-24T09:32:39.150Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 [none]
-[debug] [2024-04-24T09:32:39.948Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 200
-[debug] [2024-04-24T09:32:39.948Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 {"projectId":"ahen-bdff6","projectNumber":"306406805467","displayName":"Ahen","name":"projects/ahen-bdff6","resources":{"hostingSite":"ahen-bdff6"},"state":"ACTIVE","etag":"1_d3e8f9b8-da31-48c8-b7c6-54041b1c0e35"}
-[info] 
-[info] === Deploying to 'ahen-bdff6'...
-[info] 
-[info] i  deploying firestore, functions, hosting 
-[debug] [2024-04-24T09:32:40.263Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
-    at Object.join (node:path:1175:7)
-    at Config.path (/opt/homebrew/lib/node_modules/firebase-tools/lib/config.js:125:45)
-    at getChildEnvironment (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:56:49)
-    at runTargetCommands (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:77:14)
-    at /opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:151:24
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async chain (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/index.js:38:9)
-    at async deploy (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/index.js:94:5)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2024-04-24T09:58:53.447Z] ----------------------------------------------------------------------
-[debug] [2024-04-24T09:58:53.450Z] Command:       /opt/homebrew/Cellar/node/21.6.1/bin/node /opt/homebrew/bin/firebase deploy
-[debug] [2024-04-24T09:58:53.450Z] CLI Version:   13.7.3
-[debug] [2024-04-24T09:58:53.450Z] Platform:      darwin
-[debug] [2024-04-24T09:58:53.450Z] Node Version:  v21.6.1
-[debug] [2024-04-24T09:58:53.451Z] Time:          Wed Apr 24 2024 15:28:53 GMT+0530 (India Standard Time)
-[debug] [2024-04-24T09:58:53.451Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2024-04-24T09:58:53.482Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-04-24T09:58:53.482Z] > authorizing via signed-in user (kaustubhsagale007@gmail.com)
-[debug] [2024-04-24T09:58:53.482Z] [iam] checking project ahen-bdff6 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-04-24T09:58:53.483Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions [none]
-[debug] [2024-04-24T09:58:53.483Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions x-goog-quota-user=projects/ahen-bdff6
-[debug] [2024-04-24T09:58:53.483Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-24T09:58:55.424Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions 200
-[debug] [2024-04-24T09:58:55.424Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-24T09:58:55.425Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions [none]
-[debug] [2024-04-24T09:58:55.425Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
-[debug] [2024-04-24T09:58:57.564Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions 404
-[debug] [2024-04-24T09:58:57.565Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
-[debug] [2024-04-24T09:58:57.566Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Unknown service account","status":404}
-[debug] [2024-04-24T09:58:57.567Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 [none]
-[debug] [2024-04-24T09:58:58.280Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 200
-[debug] [2024-04-24T09:58:58.281Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 {"projectId":"ahen-bdff6","projectNumber":"306406805467","displayName":"Ahen","name":"projects/ahen-bdff6","resources":{"hostingSite":"ahen-bdff6"},"state":"ACTIVE","etag":"1_d3e8f9b8-da31-48c8-b7c6-54041b1c0e35"}
-[info] 
-[info] === Deploying to 'ahen-bdff6'...
-[info] 
-[info] i  deploying firestore, functions, hosting 
-[debug] [2024-04-24T09:58:58.696Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
-    at Object.join (node:path:1175:7)
-    at Config.path (/opt/homebrew/lib/node_modules/firebase-tools/lib/config.js:125:45)
-    at getChildEnvironment (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:56:49)
-    at runTargetCommands (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:77:14)
-    at /opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:151:24
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async chain (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/index.js:38:9)
-    at async deploy (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/index.js:94:5)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2024-04-24T09:59:58.855Z] ----------------------------------------------------------------------
-[debug] [2024-04-24T09:59:58.856Z] Command:       /opt/homebrew/Cellar/node/21.6.1/bin/node /opt/homebrew/bin/firebase deploy
-[debug] [2024-04-24T09:59:58.856Z] CLI Version:   13.7.4
-[debug] [2024-04-24T09:59:58.856Z] Platform:      darwin
-[debug] [2024-04-24T09:59:58.856Z] Node Version:  v21.6.1
-[debug] [2024-04-24T09:59:58.857Z] Time:          Wed Apr 24 2024 15:29:58 GMT+0530 (India Standard Time)
-[debug] [2024-04-24T09:59:58.857Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2024-04-24T09:59:58.891Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-04-24T09:59:58.891Z] > authorizing via signed-in user (kaustubhsagale007@gmail.com)
-[debug] [2024-04-24T09:59:58.891Z] [iam] checking project ahen-bdff6 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-04-24T09:59:58.892Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions [none]
-[debug] [2024-04-24T09:59:58.892Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions x-goog-quota-user=projects/ahen-bdff6
-[debug] [2024-04-24T09:59:58.892Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-24T10:00:00.541Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions 200
-[debug] [2024-04-24T10:00:00.541Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-24T10:00:00.541Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions [none]
-[debug] [2024-04-24T10:00:00.541Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
-[debug] [2024-04-24T10:00:02.482Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions 404
-[debug] [2024-04-24T10:00:02.482Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
-[debug] [2024-04-24T10:00:02.482Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Unknown service account","status":404}
-[debug] [2024-04-24T10:00:02.482Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 [none]
-[debug] [2024-04-24T10:00:03.200Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 200
-[debug] [2024-04-24T10:00:03.200Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 {"projectId":"ahen-bdff6","projectNumber":"306406805467","displayName":"Ahen","name":"projects/ahen-bdff6","resources":{"hostingSite":"ahen-bdff6"},"state":"ACTIVE","etag":"1_d3e8f9b8-da31-48c8-b7c6-54041b1c0e35"}
-[info] 
-[info] === Deploying to 'ahen-bdff6'...
-[info] 
-[info] i  deploying firestore, functions, hosting 
-[debug] [2024-04-24T10:00:03.541Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
-    at Object.join (node:path:1175:7)
-    at Config.path (/opt/homebrew/lib/node_modules/firebase-tools/lib/config.js:125:45)
-    at getChildEnvironment (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:56:49)
-    at runTargetCommands (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:77:14)
-    at /opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:151:24
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async chain (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/index.js:38:9)
-    at async deploy (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/index.js:94:5)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2024-04-24T10:00:48.574Z] ----------------------------------------------------------------------
-[debug] [2024-04-24T10:00:48.575Z] Command:       /opt/homebrew/Cellar/node/21.6.1/bin/node /opt/homebrew/bin/firebase deploy --debug
-[debug] [2024-04-24T10:00:48.576Z] CLI Version:   13.7.4
-[debug] [2024-04-24T10:00:48.576Z] Platform:      darwin
-[debug] [2024-04-24T10:00:48.576Z] Node Version:  v21.6.1
-[debug] [2024-04-24T10:00:48.576Z] Time:          Wed Apr 24 2024 15:30:48 GMT+0530 (India Standard Time)
-[debug] [2024-04-24T10:00:48.576Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2024-04-24T10:00:48.607Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-04-24T10:00:48.607Z] > authorizing via signed-in user (kaustubhsagale007@gmail.com)
-[debug] [2024-04-24T10:00:48.607Z] [iam] checking project ahen-bdff6 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-04-24T10:00:48.608Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions [none]
-[debug] [2024-04-24T10:00:48.608Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions x-goog-quota-user=projects/ahen-bdff6
-[debug] [2024-04-24T10:00:48.608Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-24T10:00:50.211Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions 200
-[debug] [2024-04-24T10:00:50.211Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ahen-bdff6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-24T10:00:50.212Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions [none]
-[debug] [2024-04-24T10:00:50.213Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
-[debug] [2024-04-24T10:00:52.052Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions 404
-[debug] [2024-04-24T10:00:52.052Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/ahen-bdff6/serviceAccounts/ahen-bdff6@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
-[debug] [2024-04-24T10:00:52.054Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Unknown service account","status":404}
-[debug] [2024-04-24T10:00:52.056Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 [none]
-[debug] [2024-04-24T10:00:52.764Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 200
-[debug] [2024-04-24T10:00:52.765Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ahen-bdff6 {"projectId":"ahen-bdff6","projectNumber":"306406805467","displayName":"Ahen","name":"projects/ahen-bdff6","resources":{"hostingSite":"ahen-bdff6"},"state":"ACTIVE","etag":"1_d3e8f9b8-da31-48c8-b7c6-54041b1c0e35"}
-[info] 
-[info] === Deploying to 'ahen-bdff6'...
-[info] 
-[info] i  deploying firestore, functions, hosting 
-[debug] [2024-04-24T10:00:53.095Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+[debug] [2024-04-26T19:29:29.773Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
     at Object.join (node:path:1175:7)
     at Config.path (/opt/homebrew/lib/node_modules/firebase-tools/lib/config.js:125:45)
     at getChildEnvironment (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:56:49)

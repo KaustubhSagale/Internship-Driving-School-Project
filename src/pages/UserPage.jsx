@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
-
+import { Button, Image, Text, VStack } from '@chakra-ui/react'
+import axios from "axios";
 import "/Users/kaustubhsagale/Desktop/carproject/src/styles/UserProfile.css";
 import {
   CButton,
@@ -11,7 +12,7 @@ import {
   CModalTitle,
 } from "@coreui/react";
 import { useUserAuth } from "../Contexts/UserAuthContext";
-
+import Map from "../MyComponents/Map";
 function UserPage(props) {
   const [visible, setVisible] = useState(false);
   const [visiblePayment, setVisiblePayment] = useState(false);
@@ -32,30 +33,36 @@ function UserPage(props) {
   const [pan, setPan] = useState();
   const [address, setAddress] = useState("");
   const [birthDate, setBirthDate] = useState();
+  const nevigate=useNavigate();
   const handleOpenLic = () => {
     setVisible(!visible);
   };
   const handleOpenPay=()=>{
-    setVisible(!visible);
-    setVisiblePayment(!visiblePayment)
+    window.scrollTo(0, 0);
+
+    setVisiblePayment(true)
   }
+
+
+  
   const logout=()=>{
     logOut();
     console.log("Logging Out");
     navigate('/SignUp');
   }
+
   const handleLicenseSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5001/License", {
+      const response = await fetch("http://localhost:5001/contaacts", {
         method: "POST",
         body: JSON.stringify({
           name: name,
-          mobileNumber: mobile,
-          adharNumber: adhar,
-          panNumber: pan,
+          mobile_number: mobile,
+          adhar_number: adhar,
+          pan_number: pan,
           address: address,
-          dataofBitrh: birthDate,
+          date_of_birth: birthDate,
         }),
         headers: {
           "Content-Type": "application/json",
@@ -64,14 +71,21 @@ function UserPage(props) {
 
       // Handle response here
       if (response) {
-        setVisible(false);
-        alert("Form is Submitted!");
-        setAddress("");
-        setAdhar();
-        setBirthDate();
-        setMobile();
-        setPan();
-        setName("");
+        if(response.status==201){
+          setVisible(false);
+          alert("Form is Submitted!");
+          setAddress("");
+          setAdhar();
+          setBirthDate();
+          setMobile();
+          setPan();
+          setName("");
+          
+        }
+        else{
+          alert("Something Wrong Happened")
+        }
+        
       }
     } catch (error) {
       // Error handling
@@ -85,15 +99,58 @@ function UserPage(props) {
       setName("");
     }
   };
+  // const handlePaymentInfo = async ({ amount, img, checkoutHandler }) => {
+  //   return (
+  //       <VStack>
+  //           <Image src={img} boxSize={"64"} objectFit="cover" />
+  //           <Text>₹{amount}</Text>
+  //           <Button onClick={() => checkoutHandler(amount)}>Make Payment</Button>
+  //       </VStack>
+  //   )
+  const checkoutHandler = async (amount) => {
+
+    const { data: { key } } = await axios.get("http://localhost:4000/api/getkey")
+
+    const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", {
+        amount
+
+    })
+    console.log(amount)
+
+
+    const options = {
+        key,
+        amount: order.amount,
+        currency: "INR",
+        name: "Ahen",
+        description: "Tutorial of RazorPay",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqooDEZMX_ab1soKhZR844Irfq7_FcUDUhfQ&usqp=CAU",
+        order_id: order.id,
+        callback_url: "http://localhost:4000/api/paymentverification",
+        prefill: {
+            name: "Kaustubh Sagale",
+            email: "kaustubhsagale007@gmail.com",
+            contact: "8482943210"
+        },
+        notes: {
+            "address": "Razorpay Corporate Office"
+        },
+        theme: {
+            "color": "#121212"
+        }
+    };
+    const razor = new window.Razorpay(options);
+    razor.open();
+}
   const handlePaymentInfo=async(e)=>{
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/Payment", {
-        method: "Payment",
+      const response = await fetch("http://localhost:5001/payment", {
+        method: "POST",
         body: JSON.stringify({
-          username: username,
-          startDate: startDate,
-          time: time,
+          username: "username",
+          date: startDate,
+          timing: time,
           place: place,
           price: price,
         }),
@@ -105,31 +162,35 @@ function UserPage(props) {
       // Handle response here
       if (response) {
         console.log(response)
-        setVisible(false);
-        alert("Form is Submitted!");
-        setAddress("");
-        setAdhar();
-        setBirthDate();
-        setMobile();
-        setPan();
-        setName("");
+        if(response.status===201){
+          setVisible(false);
+          alert("Form is Submitted! Nevigatting To Payment Page");
+          setVisiblePayment(false)
+          checkoutHandler(price)
+          window.scrollTo(0,0)
+          //nevigate('/Payment')
+          setUsername("");
+          setStartDate();
+          setTime()
+          setPlace('')
+          setPrice();
+        }
+        else{
+          alert("Error While Submitting Form")
+        }
       }
     } catch (error) {
       // Error handling
       console.error("Error:", error);
       alert("Error Occoured!!");
-      setAddress("");
-      setAdhar();
-      setBirthDate();
-      setMobile();
-      setPan();
-      setName("");
+      setUsername("");
+      setStartDate();
+      setTime()
+      setPlace('')
+      setPrice();
     }
   }
-  useEffect(() => {
-    console.log(props.user);
-    window.scrollTo(0, 0);
-  }, []);
+ 
   return (
     <div className="containerii ">
       <div className="modal-here">
@@ -147,7 +208,6 @@ function UserPage(props) {
           </CModalHeader>
           <CModalBody>
             <form>
-              {!visiblePayment && (
                 <div>
                   <div className="form-group">
                     <label htmlFor="name">Name</label>
@@ -215,9 +275,38 @@ function UserPage(props) {
                     />
                   </div>
                 </div>
-              )}
-              {visiblePayment && (
-                <div className="form-group">
+
+                <button
+                  className="btn btn-success"
+                  onClick={handleLicenseSubmit}
+                >
+                  Submit
+                </button>
+            </form>
+          </CModalBody>
+          <CModalFooter>
+            <CButton color="secondary" onClick={() => setVisible(false)}>
+              Close
+            </CButton>
+          </CModalFooter>
+        </CModal>
+      </div>
+      <div className="modal-here">
+      <CModal
+          visible={visiblePayment}
+          onClose={() => setVisiblePayment(false)}
+          aria-labelledby="LiveDemoExampleLabel"
+          backdrop="static"
+          tyle={{ overflowY: "auto", maxHeight: "80vh" }}
+        >
+          <CModalHeader onClose={() => setVisible(false)}>
+            <CModalTitle id="LiveDemoExampleLabel">
+              Book the Session
+            </CModalTitle>
+          </CModalHeader>
+          <CModalBody>
+            <form>
+            <div className="form-group">
                   <label htmlFor="Username" >Username</label>
                   <input className="form-control" value={props.user.email} type="text" readOnly />
                   
@@ -248,23 +337,17 @@ function UserPage(props) {
                     <option value="">Swargate</option>
                   </select>
                 </div>
-              )}
-
-              {!visiblePayment && (
+                  
                 <button
                   className="btn btn-success"
-                  onClick={handleLicenseSubmit}
+                  onClick={handlePaymentInfo}
                 >
-                  Submit
+                  Make Payment
                 </button>
-              )}
-              {visiblePayment && (
-                <button onClick={handlePaymentInfo} className="btn btn-success">Make Payment</button>
-              )}
             </form>
           </CModalBody>
           <CModalFooter>
-            <CButton color="secondary" onClick={() => setVisible(false)}>
+            <CButton color="secondary" onClick={() => setVisiblePayment(false)}>
               Close
             </CButton>
           </CModalFooter>
@@ -277,7 +360,7 @@ function UserPage(props) {
         <div className="info-div my-auto  p-auto col-md-5">
           <div className="my-auto mx-auto text-center">
             <h3 className="m-0 p-1">
-              <strong>Nama</strong>:{props.user.displayName}
+              <strong>Name</strong>:{props.user.displayName}
             </h3>
             <h3 className="m-0 p-1">
               <strong>Username</strong> : {props.user.email}
@@ -293,13 +376,13 @@ function UserPage(props) {
           </div>
         </div>
       </div>
-      <div className="website-info">
-        <div className="cardUser shadow rounded p-4 my-4 d-flex flex-row">
+      <div className="website-info ">
+        <div className="cardUser shadow rounded p-4 my-4 d-flex flex-row border">
           <div className="info col-md-6  text-center">
             <div className="my-auto">
               <h1>01</h1>
               <h2 className="m-0 p-0 text-white">Licence Section</h2>
-              <p className="m-0 p-0">
+              <p className="m-0 p-0 lo">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
                 suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing
                 elit. Sunt, suscipit.Lorem ipsum, dolor sit amet consectetur
@@ -326,19 +409,20 @@ function UserPage(props) {
             />
           </div>
         </div>
-        <div className="cardUser rounded shadow p-4 my-4 d-flex flex-row">
-          <div className="img-div p-2 co-md-6">
+        <div className="cardUser  rounded  border shadow p-4 my-4 d-flex flex-row">
+          <div className="img-div  h-50 co-md-6">
             <img
-              className="w-100 rounded h-75"
+              className="rounded "
+              id="tt"
               src="bookSection.png"
               alt="Licence Image"
             />
           </div>
-          <div className="info col-md-6  text-center">
+          <div className="info col-md-6   text-center">
             <div className="my-auto">
               <h1>02</h1>
               <h2 className="m-0 p-0 text-white">Book Section</h2>
-              <p className="m-0 p-0">
+              <p className="m-0 p-0 lo">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
                 suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing
                 elit. Sunt, suscipit.Lorem ipsum, dolor sit amet consectetur
@@ -355,6 +439,36 @@ function UserPage(props) {
           </div>
         </div>
       </div>
+        {/* <div className="cardUser shadow rounded p-4 my-4 d-flex flex-row border">
+          <div className="info col-md-6  text-center">
+            <div className="my-auto">
+              <h1>03</h1>
+              <h2 className="m-0 p-0 text-white">How to Learn Driving</h2>
+              <p className="m-0 p-0 lo">
+     <ul className="py-2">
+  <li>Virtual Driving Simulator: Practice basic maneuvers in a realistic virtual environment.</li>
+  <li>Interactive Quizzes: Test knowledge of road signs, traffic laws, and safe driving practices.</li>
+  <li>Driving Challenges: Navigate scenarios like parallel parking or merging onto a highway.</li>
+  <li>Online Courses: Cover theoretical knowledge, practical skills, and defensive driving techniques.</li>
+</ul>
+
+              </p>
+              <div className="text-center my-2">
+               
+              </div>
+            </div>
+          </div>
+          <div className="img-div p-2 co-md-5">
+            <img
+              className="w-100 rounded h-100"
+              src="https://northwestdrivingschool.com/wp-content/uploads/2022/06/8-Benefits-Of-Learning-To-Drive-Why-Driving-Lessons-Are-Worth-It.webp"
+              alt="Licence Image"
+            />
+          </div>
+          
+        </div> */}
+
+
       {
         showCards &&
         <div className="cardBody col-md-12 d-flex flex-row">
@@ -389,6 +503,8 @@ function UserPage(props) {
               <li>lorem here lorem here</li>
               <li>lorem here lorem here</li>
             </ul>
+            
+  
           </div>
           <button
             onClick={() => {
@@ -404,9 +520,39 @@ function UserPage(props) {
         </div>
       </div>
       }
-      
+   
+        <div className="cardUser shadow rounded p-4 my-4 d-flex flex-row border">
+          <div className="info col-md-6  text-center">
+            <div className="my-auto">
+              <h1>03</h1>
+              <h2 className="m-0 p-0 text-white">How to Learn Driving</h2>
+              <p className="m-0 p-0 lo">
+     <ul className="py-2">
+  <li>Virtual Driving Simulator: Practice basic maneuvers in a realistic virtual environment.</li>
+  <li>Interactive Quizzes: Test knowledge of road signs, traffic laws, and safe driving practices.</li>
+  <li>Driving Challenges: Navigate scenarios like parallel parking or merging onto a highway.</li>
+  <li>Online Courses: Cover theoretical knowledge, practical skills, and defensive driving techniques.</li>
+</ul>
+
+              </p>
+              <div className="text-center my-2">
+               
+              </div>
+            </div>
+          </div>
+          <div className="img-div p-2 co-md-5">
+            <img
+              className="w-100 rounded h-100"
+              src="https://northwestdrivingschool.com/wp-content/uploads/2022/06/8-Benefits-Of-Learning-To-Drive-Why-Driving-Lessons-Are-Worth-It.webp"
+              alt="Licence Image"
+            />
+          </div>
+          
+        </div>
+        <div><Map/></div>
     </div>
   );
 }
+
 
 export default UserPage;

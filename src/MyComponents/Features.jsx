@@ -22,11 +22,11 @@ Are You Ready To Start your Driving Course? if you said Yes, You Are In Safe Han
 </h5>
 
 <Container>
-      <Row xs={1} md={2} className="g-44">
+      <Row xs={1} md={3} className="g-44 border ">
         {/* First Row */}
         {Array.from({ length: 3 }).map((_, idx) => (
           <Col key={idx}>
-            <Card bg=' text-black' className='cc'>
+            <Card bg=' ' className='cc'>
               <Card.Body className='b'>
                 <Card.Title style={{ color: '#ff006e' }}>{titles[idx]}</Card.Title>
                 <Card.Text className='tt'>{cardTexts[idx]}</Card.Text>
@@ -36,7 +36,7 @@ Are You Ready To Start your Driving Course? if you said Yes, You Are In Safe Han
         ))}
       </Row>
 
-      <Row xs={1} md={2} className="g-55">
+      <Row xs={1} md={3} className="g-55">
         {/* Second Row */}
         {Array.from({ length: 3 }).map((_, idx) => (
           <Col key={idx + 3}>

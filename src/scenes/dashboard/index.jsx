@@ -1,5 +1,7 @@
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
+import React, { useState, useEffect } from 'react';
+
 import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import EmailIcon from "@mui/icons-material/Email";
@@ -22,10 +24,136 @@ import ProgressCircle from '/Users/kaustubhsagale/Desktop/carproject/src/MyCompo
 // import Topbar from "../global/Topbar";
 import LineC from "../../MyComponents/LineC";
 import LineChart from "/Users/kaustubhsagale/Desktop/carproject/src/MyComponents/LineChart.jsx";
+import getContact from "../../MyComponents/getcontact";
+import axios from "axios";
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const [contactsData, setContactsData] = useState([]);
 
+
+//   function fetchinfo() {
+//     fetch('http://localhost:5001/getContact')
+//   .then(response => {
+//     console.log(response)
+//     // Check if the response is successful (status 200-299)
+//   //   if (!response.ok) {
+//   //     throw new Error('Network response was not ok');
+//   //   }
+//   //   // Parse the JSON response
+//   //   return response.json();
+//   // })
+//   // .then(data => {
+//   //   // Handle the JSON data
+//   //   console.log(data);
+//   })
+//   .then(data => {
+//     setContactsData(data);
+// })
+//   .catch(error => {
+//     // Handle errors
+//     console.error('There was a problem with the fetch operation:', error);
+//   });
+// }
+// useEffect(()=> {
+//   fetchinfo()
+// },[fetchinfo])
+
+
+//   function DataComponent() {
+//     const [data, setData] = useState([]);
+  
+//     // useEffect(() => {
+//     //   fetchData();
+//     // }, []);
+//     useEffect(()=> {
+//       fetchinfo()
+//     },[fetchinfo])
+//     const fetchData = async () => {
+//       try {
+//         const response = await fetch('http://localhost:5001/getContact');
+//         const jsonData = await response.json();
+//         setData(jsonData);
+//       } catch (error) {
+//         console.error('Error fetching data:', error);
+//       }
+//     };
+  
+//     return (
+//       <div>
+//         {data.map(item => (
+//           <getContact key={item.id} data={item} />
+//         ))}
+//       </div>
+//     );
+//   }
+      
+// function DataComponent() {
+//   const [data, setData] = useState([]);
+
+//   // useEffect(() => {
+//   //   fetchData();
+//   // }, []);
+//   useEffect(()=> {
+//     fetchinfo()
+//   },[fetchinfo])
+//   const fetchData = async () => {
+//     try {
+//       const response = await fetch('http://localhost:5001/getContact');
+//       const jsonData = await response.json();
+//       setData(jsonData);
+//     } catch (error) {
+//       console.error('Error fetching data:', error);
+//     }
+//   };
+
+//   return (
+//     <div>
+//       {data.map(item => (
+//         <getContact key={item.id} data={item} />
+//       ))}
+//     </div>
+//   );
+// }
+
+useEffect(() => {
+  fetchContacts();
+}, []);
+
+// function fetchinfo() {
+//   fetch('http://localhost:5001/getContact')
+//     .then(response => response.json())
+//     .then(data => {
+//       setContactsData(data);
+//     })
+//     .catch(error => {
+//       console.error('There was a problem with the fetch operation:', error);
+//     });
+// }
+function fetchinfo() {
+  fetch('http://localhost:5001/getContact')
+.then(response => {
+  console.log(response)
+  
+})
+.catch(error => {
+  // Handle errors
+  console.error('There was a problem with the fetch operation:', error);
+});
+}
+const fetchContacts=async()=>{
+  try {
+    const res = await axios.get("http://localhost:5001/getContact");
+    const responseData = await res.json; 
+
+    console.log(responseData)
+    //const data = await res.json();
+    setContactsData(res.data.contact)
+  } catch (error) {
+    // Error occurred during fetch
+    console.error("Error:", error.message);
+  }
+}
   return (
     
     <Box m="20px">
@@ -284,8 +412,33 @@ const Dashboard = () => {
       <LineC/>
           </Box>
         </Box>
+        
       </Box>
+      
+      <Box gridColumn="span 4" gridRow="span 2" backgroundColor={colors.primary[400]} paddingRight="220px">
+  <Typography variant="h2" fontWeight="600" sx={{ marginBottom: "1px" }}>
+    Monthly Summary of Earning
+  </Typography>
+  <Box height="250px">
+
+  {contactsData.map(contact => (
+  <div key={contact._id}>
+    <p>Name: {contact.name}</p>
+    <p>Email: {contact.email}</p>
+    <p>Message: {contact.message}</p>
+  </div>
+))}
+    {/* <GeographyChart isDashboard={true} /> */}
+    {contactsData && contactsData.length > 0 && (
+      <StatBox title="Total Contacts" value={contactsData.length} />
+    )}
+  </Box>
+</Box>
+
     </Box>
+
+
+
   );
 };
 

@@ -1,6 +1,16 @@
 h1,h3{
     color: white;
 }
+.lo{
+    color: white;
+}
+
+
+#tt{
+    height: 300px;
+    width: 500px;
+}
+
 .user-image{
     aspect-ratio: 4/3;
     width: 50%;

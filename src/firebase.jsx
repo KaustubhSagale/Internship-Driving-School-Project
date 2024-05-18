@@ -251,16 +251,25 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, onAuthStateChanged, signInWithPhoneNumber, PhoneAuthProvider, signInWithCredential } from 'firebase/auth';
 
 // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDnmRGicNb3auQ3fINWjh1Iod_UKe-y6rw",
+//   authDomain: "ahen-bdff6.firebaseapp.com",
+//   projectId: "ahen-bdff6",
+//   storageBucket: "ahen-bdff6.appspot.com",
+//   messagingSenderId: "306406805467",
+//   appId: "1:306406805467:web:f5330cbdddfb3c8f3121fe",
+//   measurementId: "G-41DVPKYG2F"
+// };
 const firebaseConfig = {
   apiKey: "AIzaSyDnmRGicNb3auQ3fINWjh1Iod_UKe-y6rw",
   authDomain: "ahen-bdff6.firebaseapp.com",
+  databaseURL: "https://ahen-bdff6-default-rtdb.firebaseio.com",
   projectId: "ahen-bdff6",
   storageBucket: "ahen-bdff6.appspot.com",
   messagingSenderId: "306406805467",
   appId: "1:306406805467:web:f5330cbdddfb3c8f3121fe",
   measurementId: "G-41DVPKYG2F"
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 // import BarCharts from '../MyComponents/BarCharts';
 import Bar from "../scenes/bar";
 import Pie from '../scenes/pie';
@@ -6,7 +6,6 @@ import Line from '../scenes/line';
 import Dashboard from '../scenes/dashboard';
 
 import '/Users/kaustubhsagale/Desktop/carproject/src/styles/LoginPage.css'; // Import the CSS file
-
 
 import { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
@@ -25,12 +24,79 @@ import Geography from "/Users/kaustubhsagale/Desktop/carproject/src/scenes/geogr
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "/Users/kaustubhsagale/Desktop/carproject/src/theme.jsx";
 import Calendar from "/Users/kaustubhsagale/Desktop/carproject/src/scenes/calendar/calendar.jsx";
+import getContact from './getcontact';
 const WelcomePage = ({ username }) => {
     const [theme, colorMode] = useMode();
     const [isSidebar, setIsSidebar] = useState(true);
     const nevigate= useNavigate();
+    const [contactsData, setContactsData] = useState([]);
+
+function fetchinfo() {
+    fetch('http://localhost:5001/getContact')
+  .then(response => {
+    console.log(response)
+    // Check if the response is successful (status 200-299)
+  //   if (!response.ok) {
+  //     throw new Error('Network response was not ok');
+  //   }
+  //   // Parse the JSON response
+  //   return response.json();
+  // })
+  // .then(data => {
+  //   // Handle the JSON data
+  //   console.log(data);
+  })
+  .then(data => {
+    setContactsData(data);
+})
+  .catch(error => {
+    // Handle errors
+    console.error('There was a problem with the fetch operation:', error);
+  });
+}
+useEffect(()=> {
+  fetchinfo()
+},[fetchinfo])
+
+
+
+function DataComponent() {
+  const [data, setData] = useState([]);
+
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+  useEffect(()=> {
+    fetchinfo()
+  },[fetchinfo])
+  const fetchData = async () => {
+    try {
+      const response = await fetch('http://localhost:5001/getContact');
+      const jsonData = await response.json();
+      setData(jsonData);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  return (
+    <div>
+      {data.map(item => (
+        <getContact key={item.id} data={item} />
+      ))}
+    </div>
+  );
+}
+
+
+
+
+
+
+
 // const WelcomePage = ({ username }) => {
   return (
+   
     <div>
 <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
@@ -54,6 +120,8 @@ const WelcomePage = ({ username }) => {
             </Routes>
           </main>
         </div>
+        
+      
       </ThemeProvider>
     </ColorModeContext.Provider>
     </div>

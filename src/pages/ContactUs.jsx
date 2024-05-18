@@ -206,7 +206,7 @@ const ContactUs = () => {
             </div>
           </div>
         </section>
-        <Carousel/>
+       
         <div className="social-icons">
           {/* <a href="https://www.facebook.com/your-facebook-profile" target="_blank"><img src="https://w7.pngwing.com/pngs/282/704/png-transparent-facebook-messenger-logo-icon-facebook-facebook-logo-blue-text-trademark-thumbnail.png" alt="Facebook"/></a>
           <a href="https://www.instagram.com/your-instagram-profile" target="_blank"><img src="https://w7.pngwing.com/pngs/722/1011/png-transparent-logo-icon-instagram-logo-instagram-logo-purple-violet-text-thumbnail.png" alt="Instagram"/></a>
@@ -230,7 +230,7 @@ const ContactUs = () => {
   </div>
 </div>
 
-         
+<Carousel/>
           
         </div>
       </>

@@ -1,13 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
-
-
-
 import LoginPage from './pages/Login.jsx';
 import SignUp from './pages/SignUp.jsx';
 import WelcomePage from './MyComponents/WelcomeToDashboard.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import LoginPage from './pages/Login.jsx';
+
 import './App.css';
 import axios from 'axios';
 import LineChart from './MyComponents/LineChart.jsx';
@@ -30,6 +28,9 @@ import About from './pages/About';
 import Dashboard from './MyComponents/Dashboard.jsx';
 import Footer from './MyComponents/Footer.jsx';
 import UserPage from './pages/UserPage.jsx';
+import PaymentButton from './pages/Payment.jsx';
+import PaymentSuccess from './pages/PaymentSuccess.jsx';
+import Kaustubh from './pages/Kaustubh.jsx';
 const App = () => {
 
   return (
@@ -48,7 +49,11 @@ const App = () => {
             <Route path="/Login" element={<LoginPage/>} />
             <Route  path="/SignUp" element={<SignUp/>} /> 
             <Route  path="/UserProfile" element={<UserPage/>} /> 
-            <Route  path="/welcome" element={<WelcomePage/>} /> 
+            <Route  path="/welcome/*" element={<WelcomePage/>} /> 
+            <Route path="/Payment" element={<PaymentButton />} />
+            <Route path="/paymentsuccess" element={<PaymentSuccess />} />
+            <Route path="/Kaustubh" element={<Kaustubh />} />
+
           </Routes>
          
           </Router>

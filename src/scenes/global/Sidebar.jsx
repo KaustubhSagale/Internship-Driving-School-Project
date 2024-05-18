@@ -391,6 +391,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './sidebar.scss';
 
+
+
 const sidebarNavItems = [
     {
         display: 'Home',
@@ -430,6 +432,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     const sidebarRef = useRef();
     const indicatorRef = useRef();
     const location = useLocation();
+    const [contactsData, setContactsData] = useState([]);
 
     useEffect(() => {
         setTimeout(() => {
@@ -438,6 +441,13 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             setStepHeight(sidebarItem.clientHeight);
         }, 50);
     }, []);
+
+
+    
+
+
+
+
 
     useEffect(() => {
         const curPath = window.location.pathname.split('/')[1];
